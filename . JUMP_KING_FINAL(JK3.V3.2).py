@@ -201,21 +201,21 @@ def jump(x, y, right_memory, left_memory, fall, stop_fall, stop_jump, platforms)
 
 
 def reset(king_x, king_y, level, stop_fall):    
-    if pyxel.btn(pyxel.KEY_Z):
+    if pyxel.btn(pyxel.KEY_Z) and pyxel.btn(pyxel.KEY_SHIFT):
         king_y -= 6
         stop_fall = True
-    if pyxel.btn(pyxel.KEY_S):
+    if pyxel.btn(pyxel.KEY_S) and pyxel.btn(pyxel.KEY_SHIFT):
         king_y += 6
         stop_fall = True
-    if pyxel.btn(pyxel.KEY_Q):
+    if pyxel.btn(pyxel.KEY_Q) and pyxel.btn(pyxel.KEY_SHIFT):
         king_x -= 6
         stop_fall = True
-    if pyxel.btn(pyxel.KEY_D):
+    if pyxel.btn(pyxel.KEY_D) and pyxel.btn(pyxel.KEY_SHIFT):
         king_x += 6
         stop_fall = True
-    if pyxel.btn(pyxel.KEY_T):
+    if pyxel.btn(pyxel.KEY_T) and pyxel.btn(pyxel.KEY_SHIFT):
         level += 1
-    if pyxel.btn(pyxel.KEY_G):
+    if pyxel.btn(pyxel.KEY_G) and pyxel.btn(pyxel.KEY_SHIFT):
         level -= 1
         
     if (pyxel.btn(pyxel.KEY_SPACE) or king_y > 260) and level == 1 :       
